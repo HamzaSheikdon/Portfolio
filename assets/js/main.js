@@ -21,19 +21,27 @@ tabs.forEach( tab =>{
 
 /*=============== POPUP PASSWORD ===============*/
 const correctPassword = "booster";
+const passwordEnteredKey = "passwordEntered";
 
 // Function to show the password prompt
 function showPasswordPrompt() {
-  const password = prompt("Enter the password:");
+  // Check if the password has already been entered
+  const passwordEntered = localStorage.getItem(passwordEnteredKey);
 
-  if (password === correctPassword) {
-    // Password is correct, allow access
-    alert("Password is correct. Welcome!");
-  } else {
-    // Password is incorrect, show an error message
-    alert("Incorrect password. Access denied.");
-    // Reload the page to prevent unauthorized access
-    location.reload();
+  if (!passwordEntered) {
+    const password = prompt("Enter the password:");
+
+    if (password === correctPassword) {
+      // Password is correct, allow access
+      alert("Password is correct. Welcome!");
+      // Set the flag in localStorage to indicate that the password has been entered
+      localStorage.setItem(passwordEnteredKey, true);
+    } else {
+      // Password is incorrect, show an error message
+      alert("Incorrect password. Access denied.");
+      // Reload the page to prevent unauthorized access
+      location.reload();
+    }
   }
 }
 

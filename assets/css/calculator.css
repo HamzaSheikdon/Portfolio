@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background: #3a4452;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px; 
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.calculator form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.calculator form .display input[type="text"] {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+
+.calculator form input.equal {
+    width: 145px;
+}
+
+.history{
+    position: absolute;
+    text-align: center;
+    background:  #3a4452;
+    top: 25px;
+    width: 250px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.goToPortfolioButton {
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 620px;
+    margin-left: 10px; 
+    align-self: flex-start;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: fit-content;
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: rgb(25, 28, 29);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
